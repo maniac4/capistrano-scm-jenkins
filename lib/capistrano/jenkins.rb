@@ -130,7 +130,7 @@ class Capistrano::Jenkins < Capistrano::SCM
 
     def release
       context.execute :mv, "-vf archive/*", release_path
-      context.execute :rm, "-rf ."
+      context.execute :rm, "-rf *"
     end
 
     def fetch_revision
